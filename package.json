@@ -5,11 +5,12 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js --ignore dist/ res/ static/ --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-db": "knex migrate:latest"
   },
   "author": "Rajat SRivastava",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "knex": "^0.13.0",
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
